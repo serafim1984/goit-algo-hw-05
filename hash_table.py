@@ -26,7 +26,7 @@ class HashTable:
 
         if self.table[key_hash] is None:
             print('No such key found')
-            return True
+            return False
         
         else:
             for pair in self.table[key_hash]:
@@ -34,7 +34,7 @@ class HashTable:
                     self.table[key_hash].remove(pair)
                     return True
             print('No such key found')
-            return True
+            return False
 
 
     def get(self, key):
